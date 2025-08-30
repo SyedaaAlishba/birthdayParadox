@@ -18,9 +18,9 @@ public class BirthdayParadox {
     //    take number of trials from user
     public int inputTrial() {
         System.out.println("How many times you want to repeat searching");
-        return  sc.nextInt();
-    }
+        return sc.nextInt();
 
+    }
 
 
     public  boolean runOneTrial(int numPeople){

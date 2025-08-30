@@ -1,13 +1,16 @@
 package randomGenerator;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class RandomNumber {
-    public RandomNumber(int n, ArrayList<Integer> birthDays) {
-        for (int i = 0; i < n; i++) {
-            int random = (int) (Math.random() * 365) + 1; //randomly generated birthdays (1-365)
-             //add in list
-            birthDays.add(random);
+    public RandomNumber(int count, ArrayList<Integer> birthDays) {
+        Random rand = new Random();
+        birthDays.clear(); // Ensure we start with an empty list
+
+        for (int i = 0; i < count; i++) {
+            // Generate random birthday between 1 and 365
+            birthDays.add(rand.nextInt(365) + 1);
         }
     }
 }
